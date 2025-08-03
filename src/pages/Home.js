@@ -1,21 +1,21 @@
 import React from "react";
 import "../index.css";
-import logo from "../assets/logowidetransparent.png"; // Updated logo
-import pcIcon from "../assets/pcicon.png"; // Replace with a dog/cat illustration when ready
+import logo from "../assets/logowidetransparent.png";
+import sofa from "../assets/sofa.png";
 import { Link } from "react-router-dom";
 
 function Home() {
   return (
-    <div className="min-h-screen bg-soft-cream text-soft-brown px-4 sm:px-6 md:px-8 pt-4 pb-10 font-sans">
-      {/* Main Content */}
-      <div className="relative z-10">
+    <div className="min-h-screen relative bg-soft-cream text-soft-brown px-4 sm:px-6 md:px-8 pt-4 pb-10 font-sans">
+      {/* Main z-indexed content */}
+      <div className="z-10">
         {/* Navbar */}
         <header className="flex flex-col md:flex-row justify-between items-center gap-4 md:gap-0 mb-10">
           <div className="flex items-center space-x-2 text-2xl font-bold">
             <img
               src={logo}
               alt="Soft Landings Logo"
-              className="h-20 w-auto max-w-[14rem] sm:max-w-[18rem] md:max-w-[20rem]"
+              className="h-16 sm:h-20 md:h-24 w-auto"
             />
           </div>
           <nav className="flex flex-col md:flex-row gap-3 md:gap-6 text-lg text-center">
@@ -26,36 +26,61 @@ function Home() {
           </nav>
         </header>
 
-        {/* Hero Section */}
-        <main className="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
-          <div className="text-center md:text-left">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-4 text-soft-brown">
-              Helping Hard-to-Home<br />Animals Find Soft Landings
-            </h1>
-            <p className="text-base sm:text-lg md:text-2xl text-soft-taupe mb-6 max-w-xl mx-auto md:mx-0">
-              We remove the financial barriers to adoption so more animals get the
-              second chance they deserve.
-            </p>
+        {/* Hero section */}
+        <div className="md:flex md:pt-14">
+          {/* Left panel */}
+          <div className="md:w-3/5 flex flex-col justify-start text-left">
+            <div className="max-w-[42rem]">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-6">
+                Helping Hard-to-Home<br />Animals Find Soft Landings
+              </h1>
+              <p className="text-lg text-soft-taupe mb-4">
+                We remove the financial barriers to adoption so more animals get the second chance they deserve.
+              </p>
+              <p className="text-lg text-soft-taupe mb-4">
+                Some animals wait months, even years for a family — not because they’re unlovable, but because the cost of care feels overwhelming.
+              </p>
+              <p className="text-lg text-soft-taupe mb-4 font-semibold">
+                That’s where we step in.
+              </p>
+              <p className="text-lg text-soft-taupe mb-8">
+                By contributing towards essential expenses like vet fees, transport, and starter supplies, we make it easier for the right people to say yes to the animals who need them most.
+              </p>
+              {/* Button aligned with text block */}
+              <div className="flex justify-center md:justify-start md:pl-[10vw]">
+                <Link to="/support">
+                  <button className="text-lg bg-soft-peach text-white font-semibold py-4 px-8 rounded shadow hover:bg-soft-brown transition">
+                    Get Involved
+                  </button>
+                </Link>
+              </div>
+            </div>
           </div>
 
-          {/* Image */}
-          <div className="flex justify-center">
-            <img
-              src={pcIcon} // Swap this out for a custom dog/cat graphic if available
-              alt="Dog and cat illustration"
-              className="max-h-[18rem] sm:max-h-[24rem] md:max-h-[35rem] w-auto pointer-events-none select-none"
-            />
-          </div>
-        </main>
-
-        {/* Button */}
-        <div className="mt-8 flex justify-center">
-          <Link to="/support">
-            <button className="w-full sm:w-auto text-lg bg-soft-peach text-white font-semibold py-4 px-8 rounded shadow hover:bg-soft-brown transition">
-              Get Involved
-            </button>
-          </Link>
+          {/* Spacer */}
+          <div className="hidden md:block md:flex-1"></div>
         </div>
+      </div>
+
+      {/* Desktop-only: sofa illustration pinned to bottom right */}
+      <img
+        src={sofa}
+        alt="Animal on sofa illustration"
+        className="
+          hidden md:block
+          absolute bottom-0 right-0
+          w-[40rem] lg:w-[45rem]
+          pointer-events-none select-none
+        "
+      />
+
+      {/* Mobile: sofa below content */}
+      <div className="mt-8 md:hidden flex justify-center">
+        <img
+          src={sofa}
+          alt="Animal on sofa illustration"
+          className="w-80 pointer-events-none select-none"
+        />
       </div>
     </div>
   );
