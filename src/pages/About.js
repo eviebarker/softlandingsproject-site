@@ -2,19 +2,20 @@ import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/logowidetransparent.png";
 import aboutImage from "../assets/aboutus.png";
+import howWeWorkImage from "../assets/howwework.png";
 
 function About() {
   return (
-    <div className="min-h-screen bg-soft-cream text-soft-brown px-4 sm:px-6 md:px-8 pt-4 pb-10 font-sans overflow-hidden">
-      {/* Main Content */}
-      <div className="relative z-10">
+    <div className="relative min-h-screen bg-soft-cream text-soft-brown font-sans">
+      {/* Navbar & About */}
+      <div className="z-10 px-4 sm:px-6 md:px-8 pt-4 pb-32">
         {/* Navbar */}
         <header className="flex flex-col md:flex-row justify-between items-center gap-4 md:gap-0 mb-12">
           <div className="flex items-center space-x-2 text-2xl font-bold">
             <img
               src={logo}
               alt="Soft Landings Logo"
-              className="h-20 w-auto max-w-[14rem] sm:max-w-[18rem] md:max-w-[20rem]"
+              className="h-16 sm:h-20 md:h-24 w-auto"
             />
           </div>
           <nav className="flex flex-col md:flex-row gap-3 md:gap-6 text-lg text-center">
@@ -26,7 +27,7 @@ function About() {
         </header>
 
         {/* About Section */}
-        <main className="grid grid-cols-1 md:grid-cols-2 items-center gap-8 text-center md:text-left">
+        <main className="grid grid-cols-1 md:grid-cols-2 items-center gap-8 text-center md:text-left mb-24">
           <div>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-6 text-soft-brown">
               About Soft Landings
@@ -50,6 +51,46 @@ function About() {
           </div>
         </main>
       </div>
+
+      {/* How We Work Section with full-bleed trapezoid */}
+      <section className="absolute top-[calc(100%_-_12rem)] left-0 w-full min-h-[calc(100vh_-_6rem)]">
+        {/* Trapezoid SVG */}
+        <svg
+          viewBox="0 0 100 100"
+          preserveAspectRatio="none"
+          className="absolute inset-0 w-full h-full"
+        >
+          <polygon points="0,20 100,0 100,100 0,100" fill="#3E301F" />
+        </svg>
+
+        {/* Content with mobile-first text→image order */}
+        <div className="relative z-10 px-4 sm:px-6 md:px-8 pt-32 pb-16 grid grid-cols-1 md:grid-cols-2 items-center gap-8 text-center md:text-left">
+          {/* Text on Mobile first, Desktop second */}
+          <div className="order-1 md:order-2 text-soft-cream max-w-xl mx-auto md:mx-0">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
+              How We Work
+            </h2>
+            <p className="text-base sm:text-lg md:text-2xl leading-relaxed mb-6">
+              We operate as a charitable fund that provides direct financial assistance to adopters of hard-to-home animals. Our model is simple: trusted rescues refer suitable cases, and we work with them to identify what’s needed.
+            </p>
+            <p className="text-base sm:text-lg md:text-2xl leading-relaxed mb-6">
+              We can contribute towards transport, initial vet work, starter supplies, and other essential costs. Each dog we help is listed on our site with a transparent breakdown of support offered.
+            </p>
+            <p className="text-base sm:text-lg md:text-2xl leading-relaxed">
+              All support is raised through community donations, and anything left over goes to help the next dog in line.
+            </p>
+          </div>
+
+          {/* Image on Mobile second, Desktop first */}
+          <div className="order-2 md:order-1 flex justify-center md:justify-start">
+            <img
+              src={howWeWorkImage}
+              alt="How Soft Landings Works"
+              className="max-h-[20rem] sm:max-h-[30rem] md:max-h-[40rem] w-auto pointer-events-none select-none"
+            />
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
