@@ -12,7 +12,7 @@ function Support() {
             <img
               src={logo}
               alt="Soft Landings Logo"
-              className="h-20 w-auto max-w-[14rem] sm:max-w-[18rem] md:max-w-[20rem]"
+              className="h-16 sm:h-20 md:h-24 w-auto"
             />
           </div>
           <nav className="flex flex-col md:flex-row gap-3 md:gap-6 text-lg text-center">
