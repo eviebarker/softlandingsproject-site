@@ -81,12 +81,12 @@ function About() {
             </p>
           </div>
 
-          {/* Image on Mobile second, Desktop first */}
-          <div className="order-2 md:order-1 flex justify-center md:justify-start">
+          {/* Image on Mobile second, Desktop first (larger, rotated, nudged further right & down) */}
+          <div className="order-2 md:order-1 flex justify-center md:justify-start md:pl-32 md:mt-16">
             <img
               src={howWeWorkImage}
               alt="How Soft Landings Works"
-              className="max-h-[20rem] sm:max-h-[30rem] md:max-h-[40rem] w-auto pointer-events-none select-none"
+              className="w-64 sm:w-80 md:w-96 rotate-3 pointer-events-none select-none"
             />
           </div>
         </div>

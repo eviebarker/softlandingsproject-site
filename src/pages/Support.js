@@ -27,7 +27,7 @@ function Support() {
         <main className="max-w-3xl mx-auto text-center">
           <h1 className="text-5xl font-bold mb-6 text-soft-brown">Support Our Animals</h1>
           <p className="text-xl text-soft-taupe mb-8">
-            Every animal deserves a second chance — especially those often overlooked due to age,
+            Every animal deserves a second chance - especially those often overlooked due to age,
             health, or behavioural needs. Soft Landings exists to help them find loving homes by
             removing the financial barriers that stand in the way of adoption.
           </p>
