@@ -74,10 +74,10 @@ function About() {
               We operate as a charitable fund that provides direct financial assistance to adopters of hard-to-home animals. Our model is simple: trusted rescues refer suitable cases, and we work with them to identify what’s needed.
             </p>
             <p className="text-base sm:text-lg md:text-2xl leading-relaxed mb-6">
-              We can contribute towards transport, initial vet work, starter supplies, and other essential costs. Each dog we help is listed on our site with a transparent breakdown of support offered.
+              We can contribute towards transport, initial vet work, starter supplies, and other essential costs. Each animal we help is listed on our site with a transparent breakdown of support offered.
             </p>
             <p className="text-base sm:text-lg md:text-2xl leading-relaxed">
-              All support is raised through community donations, and anything left over goes to help the next dog in line.
+              All support is raised through community donations, and anything left over goes to help the next animal in line.
             </p>
           </div>
 
