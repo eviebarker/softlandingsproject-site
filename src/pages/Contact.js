@@ -32,7 +32,7 @@ function Contact() {
 
           <div className="bg-soft-blush/20 border border-soft-blush p-8 rounded-lg shadow-lg">
             <form
-              action="https://formspree.io/f/xqapgygy"
+              action="https://formspree.io/f/xkgzqgrq"
               method="POST"
               className="space-y-6"
             >
