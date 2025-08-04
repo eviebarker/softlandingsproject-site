@@ -32,7 +32,7 @@ function FundingPolicy() {
               Support
             </Link>
             <Link
-              to="/funding-policy"
+              to="/fundingpolicy"
               className="hover:underline hover:text-soft-peach"
             >
               Funding Policy
