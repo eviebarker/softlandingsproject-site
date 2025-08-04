@@ -19,6 +19,7 @@ function Support() {
             <Link to="/" className="hover:underline hover:text-soft-peach">Home</Link>
             <Link to="/about" className="hover:underline hover:text-soft-peach">About</Link>
             <Link to="/support" className="hover:underline hover:text-soft-peach">Support</Link>
+            <Link to="/fundingpolicy" className="hover:underline hover:text-soft-peach">Funding Policy</Link>
             <Link to="/contact" className="hover:underline hover:text-soft-peach">Contact</Link>
           </nav>
         </header>

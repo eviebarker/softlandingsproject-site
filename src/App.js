@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Support from "./pages/Support";
 import Contact from "./pages/Contact";
+import FundingPolicy from "./pages/FundingPolicy";
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/support" element={<Support />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/fundingpolicy" element={<FundingPolicy />} />
       </Routes>
     </Router>
   );
