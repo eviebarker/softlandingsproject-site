@@ -61,7 +61,7 @@ function About() {
           preserveAspectRatio="none"
           className="absolute inset-0 w-full h-full"
         >
-          <polygon points="0,10 100,0 100,100 0,100" fill="#3E301F" />
+          <polygon points="0,5 100,0 100,100 0,100" fill="#3E301F" />
         </svg>
 
         {/* Content with mobile-first text→image order */}
